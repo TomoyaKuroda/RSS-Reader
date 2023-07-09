@@ -93,6 +93,7 @@ const clearMessage = ()=>{
     <Layout feedsStore={feedsStore}>
       <div className="home-page vertical-center">
         <h1 className="center">RSS Reader</h1>
+        <p>A privacy-friendly RSS Reader that operates locally on your machine. Stay up-to-date with your favorite news and blogs.</p>
         <h2 className="center">
           Enter your favorite website and get the feeds!
         </h2>
