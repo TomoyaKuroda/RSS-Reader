@@ -12,3 +12,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@media(min-width: 960px){
+  .content{
+    padding-left: 300px;
+    max-width: 1200px;
+    margin: auto;
+  }
+}

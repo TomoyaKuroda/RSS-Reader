@@ -23,27 +23,27 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import logo from "../assets/logo.png";
 function Sidebar({ location, feedsStore }) {
-  const drawerWidth = 240;
+  const drawerWidth = '25%';
 
   const useStyles = makeStyles(theme => ({
     root: {
       display: "flex"
     },
     drawer: {
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up("lg")]: {
         width: drawerWidth,
         flexShrink: 0
       }
     },
     menuButton: {
       marginRight: theme.spacing(2),
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up("lg")]: {
         display: "none"
       }
     },
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
-      width: drawerWidth
+      width: 300
     },
     content: {
       flexGrow: 1,
@@ -135,7 +135,7 @@ function Sidebar({ location, feedsStore }) {
       </Toolbar>
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Hidden smUp implementation="css">
+        <Hidden xlUp implementation="css">
           <Drawer
             // container={container}
             variant="temporary"
@@ -152,7 +152,7 @@ function Sidebar({ location, feedsStore }) {
             {drawer}
           </Drawer>
         </Hidden>
-        <Hidden xsDown implementation="css">
+        <Hidden smDown implementation="css">
           <Drawer
             classes={{
               paper: classes.drawerPaper

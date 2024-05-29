@@ -4,11 +4,10 @@ import { Row, Col} from 'react-bootstrap'
 
 export default function Layout ({ children, feedsStore}){
 return (
-<Row>
-<Col sm={3}><Sidebar feedsStore={feedsStore}/>
-</Col>
-<Col sm={9}>
+<>
+<Sidebar feedsStore={feedsStore}/>
+<div className='content'>
     {children}
-    </Col>
-    </Row>)
+</div>
+    </>)
 }
